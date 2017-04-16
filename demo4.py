@@ -22,13 +22,12 @@ text = (
     "编剧邵钧林和稽道青说",
     "这里有关天培的有关事迹",
     "龚学平等领导,邓颖超生前",
+    "刘喜杰石国祥会见吴亚琴先进事迹报告团成员"
 )
 
 segment = HanLP.newSegment().enableNameRecognize(True)
 for i in range(len(text)):
-    print("====")
     sentence = text[i]
-    # print(segment.segment(sentence).toString())
-    print(segment.seg(sentence))
+    print(segment.seg(JString(sentence)))
 
 shutdownJVM()
