@@ -33,26 +33,6 @@ print("*"*10, "命名实体识别与词性标注")
 NLPTokenizer = JClass('com.hankcs.hanlp.tokenizer.NLPTokenizer')
 print(NLPTokenizer.segment('中国科学院计算技术研究所的宗成庆教授正在教授自然语言处理课程'))
 
-# 中国人名识别
-print("*"*10, "中国人名识别")
-text = (
-    "签约仪式前，秦光荣、李纪恒、仇和等一同会见了参加签约的企业家。",
-    "王国强、高峰、汪洋、张朝阳光着头、韩寒、小四",
-    "张浩和胡健康复员回家了",
-    "王总和小丽结婚了",
-    "编剧邵钧林和稽道青说",
-    "这里有关天培的有关事迹",
-    "龚学平等领导,邓颖超生前",
-)
-
-# Segment = JClass("com.hankcs.hanlp.recognition.nr.PersonRecognition")
-# segment = Segment()
-segment = HanLP.newSegment().enableNameRecognize(True)
-for i in range(len(text)):
-    sentence = text[i]
-    # print(segment.segment(sentence).toString())
-    print(segment.seg(sentence))
-
 # 关键词提取
 print("*"*10, "关键词提取")
 document = "水利部水资源司司长陈明忠9月29日在国务院新闻办举行的新闻发布会上透露，" \
