@@ -7,7 +7,7 @@
 
 from jpype import *
 
-hanLPLibPath = '/var/www/hanlp/hanlp-1.3.2-release/'
+hanLPLibPath = '/var/hanlp/hanlp-1.3.2-release/'
 javaClassPath = hanLPLibPath+'hanlp-1.3.2.jar'+':'+hanLPLibPath
 
 startJVM(getDefaultJVMPath(), '-Djava.class.path='+javaClassPath, '-Xms1g', '-Xmx1g')
