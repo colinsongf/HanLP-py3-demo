@@ -28,6 +28,9 @@ text = '广州迪奥信息科技有限公司是一个集大数据研发，产品
 InfoTitle("标准分词")
 termList = HanLP.segment(text)
 print(termList)
+for i in range(len(termList)):
+    term = termList[i]
+    print(i, term)
 
 # NLP分词
 # NLPTokenizer 会执行全部命名实体识别和词性标注。
